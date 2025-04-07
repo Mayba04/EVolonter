@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профіль — Громадянин</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function() {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light") {
+        document.documentElement.classList.add("light");
+        document.body.classList.add("light");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">💠 EVOLONTER</div>
+    <ul id="nav-links"></ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+
+  <main>
+    <h2>👤 Профіль: Громадянин</h2>
+    <p>Отримуйте оновлення про волонтерську діяльність та державні послуги.</p>
+  </main>
+
+  <script>
+    if (localStorage.getItem("role") !== "user") window.location.href = "login.html";
+  </script>
+  <script src="auth.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

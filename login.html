@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вхід — EVOLONTER</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function() {
+      const theme = localStorage.getItem("theme");
+      if (theme === "light") {
+        document.documentElement.classList.add("light");
+        document.body.classList.add("light");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo">💠 EVOLONTER</div>
+    <ul id="nav-links"></ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+
+  <main>
+    <h1>Вхід у систему</h1>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Введіть email" required />
+      <input type="password" id="password" placeholder="Введіть пароль" required />
+      <button type="submit">Увійти</button>
+    </form>
+    <div id="login-error" class="content"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
